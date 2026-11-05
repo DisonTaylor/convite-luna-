@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b72">
+  <meta name="description" content="Convite especial para o primeiro aniversário de Luna Taylor.">
+  <title>1º Aninho da Luna Taylor 👑</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="forest-backdrop" aria-hidden="true"></div>
+  <div class="butterfly-layer" aria-hidden="true"></div>
+  <main class="site">
+    <div class="sparkle sparkle-one">✦</div>
+    <div class="sparkle sparkle-two">✧</div>
+    <header class="intro">
+      <p class="eyebrow">✨ Um conto de fadas está começando ✨</p>
+      <h1>Você é nosso convidado especial!</h1>
+      <p class="subtitle">Venha celebrar esse momento mágico com a Luna. 💖</p>
+    </header>
+
+    <section class="invitation" aria-label="Convite de aniversário da Luna">
+      <img src="assets/convite-luna.png" alt="Convite encantado do primeiro aniversário de Luna Taylor">
+    </section>
+
+    <section class="music-card" aria-label="Música de fundo">
+      <div class="music-icon" aria-hidden="true">♫</div>
+      <div class="music-info">
+        <strong>O Místico Jardim</strong>
+        <span id="musicStatus" aria-live="polite">Uma música para entrar no clima da festa</span>
+      </div>
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Tocar música">▶</button>
+      <label class="volume-control" for="volume">♪ <input id="volume" type="range" min="0" max="1" step="0.05" value="0.65" aria-label="Volume da música"></label>
+      <audio id="backgroundMusic" src="assets/musica.mp3" loop preload="metadata"></audio>
+    </section>
+
+    <section class="actions" aria-labelledby="actionsTitle">
+      <p class="section-kicker">👑 Um toque para continuar a magia 👑</p>
+      <h2 id="actionsTitle">Escolha uma opção</h2>
+      <div class="button-grid">
+        <a class="action-button blue" href="https://wa.me/5584992322547?text=Ol%C3%A1!%20Estou%20passando%20para%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20aninho%20da%20Luna%20Taylor.%20%F0%9F%92%96" target="_blank" rel="noopener">
+          <span class="button-icon">💙</span><span><strong>Confirmar presença</strong><small>Avise a mamãe pelo WhatsApp</small></span><span class="arrow">›</span>
+        </a>
+        <button class="action-button red" type="button" data-modal="giftsModal">
+          <span class="button-icon">🎁</span><span><strong>Lista de presentes</strong><small>Veja as lojas indicadas</small></span><span class="arrow">›</span>
+        </button>
+        <a class="action-button purple" href="https://maps.app.goo.gl/BsKKFZAn4FKZyKKE6" target="_blank" rel="noopener">
+          <span class="button-icon">📍</span><span><strong>Como chegar</strong><small>Veja o caminho até a festa</small></span><span class="arrow">›</span>
+        </a>
+        <button class="action-button green" type="button" data-modal="videoModal">
+          <span class="button-icon">💌</span><span><strong>Mensagem especial</strong><small>Assista a uma surpresa da Luna</small></span><span class="arrow">›</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>Feito com carinho para celebrar a nossa princesa <strong>Luna Taylor</strong> 👑🦋</footer>
+  </main>
+
+  <dialog class="modal" id="giftsModal" aria-labelledby="giftsTitle">
+    <div class="modal-content">
+      <button class="close-modal" type="button" aria-label="Fechar">×</button>
+      <div class="modal-emoji">🎁</div>
+      <h2 id="giftsTitle">Lojas sugeridas</h2>
+      <p>Essas são as lojas como sugestão. Toque para ver cada loja no mapa.</p>
+      <a class="store-link" href="https://maps.app.goo.gl/rm55Mh7oZSYoPV188" target="_blank" rel="noopener"><span>🛍️ Loja Ana Kids</span><b>Ver localização ↗</b></a>
+      <a class="store-link" href="https://maps.app.goo.gl/eWHZeNJiAAk17gLVA" target="_blank" rel="noopener"><span>🛍️ Loja Mini closet</span><b>Ver localização ↗</b></a>
+      <a class="store-link" href="https://maps.app.goo.gl/hZjKiCmJV9isrpLp8" target="_blank" rel="noopener"><span>🛍️ Loja Glamour Calçados</span><b>Ver localização ↗</b></a>
+    </div>
+  </dialog>
+
+  <dialog class="modal video-modal" id="videoModal" aria-labelledby="videoTitle">
+    <div class="modal-content">
+      <button class="close-modal" type="button" aria-label="Fechar">×</button>
+      <div class="modal-emoji">💌</div>
+      <h2 id="videoTitle">Uma mensagem especial</h2>
+      <p>Com muito carinho, uma surpresa para você! 💗</p>
+      <video id="specialVideo" controls playsinline preload="metadata">
+        <source src="assets/mensagem-especial.mp4" type="video/mp4">
+        Seu navegador não consegue reproduzir este vídeo.
+      </video>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

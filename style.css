@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+:root{--navy:#4065af;--gold:#d9a83e;--cream:#fff9ed;--ink:#26334a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:#102d38;color:var(--ink);font-family:'Nunito',sans-serif;position:relative;isolation:isolate;overflow-x:hidden}
+.site{width:min(100% - 28px,850px);margin:0 auto;padding:28px 0 24px;position:relative;z-index:2}
+.intro{text-align:center;margin:0 auto 22px}
+.eyebrow{margin:0 0 8px;color:#efeeec;font-weight:800;letter-spacing:.08em;font-size:.85rem}
+h1,h2{font-family:'Playfair Display',serif}
+h1{font-size:clamp(1.7rem,5vw,2.7rem);color:#fefeff;margin:0}
+.subtitle{margin:8px 0 0;color:#efedeb}
+.invitation{width:min(100%,590px);margin:0 auto;border:5px solid #d9b15b;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 12px 32px #5d48252b}
+.invitation img{display:block;width:100%;height:auto}
+.music-card{width:min(100%,590px);margin:18px auto 28px;padding:13px 16px;display:flex;align-items:center;gap:12px;background:#fffdf8;border:1px solid #e7d4a8;border-radius:18px;box-shadow:0 5px 16px #5d482514}
+.music-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#173b72;color:#fff;font-size:1.5rem}
+.music-info{display:flex;flex:1;min-width:0;flex-direction:column}
+.music-info strong{color:#173b72}.music-info span{font-size:.78rem;color:#776d60}
+button{font:inherit;cursor:pointer}
+.music-toggle{border:0;border-radius:50%;width:42px;height:42px;background:#e7bd60;color:#173b72;font-weight:900}
+.volume-control{display:flex;align-items:center;gap:5px;color:#a27825}
+.volume-control input{width:76px;accent-color:#b8862c}
+.actions{width:min(100%,650px);margin:0 auto;text-align:center}
+.section-kicker{color:#f1efec;font-weight:800;margin:0 0 4px}
+.actions h2{font-size:1.8rem;color:#eaecee;margin:0 0 18px}
+.button-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.action-button{min-height:82px;border:2px solid #e5c477;border-radius:18px;padding:13px 15px;display:flex;align-items:center;gap:12px;text-align:left;text-decoration:none;color:#fff;box-shadow:0 5px 0 #00000016,0 8px 18px #3d38231c;transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.action-button:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 8px 0 #00000012,0 12px 22px #3d382326}
+.action-button:active{transform:scale(.97)}
+.action-button:focus-visible,.music-toggle:focus-visible,.close-modal:focus-visible{outline:3px solid #e5a92c;outline-offset:3px}
+.blue{background:linear-gradient(135deg,#246bc0,#123c83)}.red{background:linear-gradient(135deg,#ed5651,#b9192d)}.purple{background:linear-gradient(135deg,#9860c8,#58318e)}.green{background:linear-gradient(135deg,#48a66d,#176746)}
+.button-icon{font-size:1.8rem;flex-shrink:0}
+.action-button span:nth-child(2){display:flex;flex-direction:column;min-width:0}
+.action-button strong{font-size:1rem}.action-button small{font-size:.76rem;opacity:.9;margin-top:3px}
+.arrow{font-size:1.8rem;margin-left:auto}
+footer{text-align:center;margin:28px 0 4px;color:#e9e7e5;font-family:'Playfair Display',serif}
+footer strong{color:#fbfaf8}
+.sparkle{position:absolute;color:#d9a83e;pointer-events:none;animation:twinkle 2.8s ease-in-out infinite}
+.sparkle-one{top:110px;left:-8px;font-size:24px}.sparkle-two{top:300px;right:-4px;font-size:30px;animation-delay:1.2s}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
+.modal{border:0;border-radius:22px;padding:0;width:min(92vw,480px);max-width:480px;background:transparent;overflow:visible}
+.modal::backdrop{background:#101a2bc2;backdrop-filter:blur(4px)}
+.modal[open]{animation:pop .24s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-content{position:relative;background:var(--cream);border:3px solid #d9b15b;border-radius:22px;padding:26px 22px 22px;text-align:center;box-shadow:0 16px 45px #0004}
+.close-modal{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#6e4b1b;font-size:2rem;line-height:1}
+.modal-emoji{font-size:2rem}.modal h2{color:#173b72;margin:4px 0 8px}.modal p{color:#6b5a48;margin:0 0 18px}
+.store-link{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;margin-top:10px;border-radius:13px;background:#fff;border:1px solid #ead8ad;color:#29436c;text-decoration:none;font-weight:800;transition:background .2s,transform .2s}
+.store-link:hover{background:#fff3d6;transform:translateY(-2px)}
+.store-link b{font-size:.8rem;color:#946719}
+.video-modal{width:min(94vw,720px);max-width:720px}
+.video-modal video{display:block;width:100%;max-height:65vh;border-radius:14px;background:#111}
+@media(max-width:560px){.site{width:min(100% - 20px,850px);padding-top:20px}.button-grid{grid-template-columns:1fr;gap:11px}.action-button{min-height:74px}.music-card{gap:9px;padding:11px}.volume-control input{width:55px}.sparkle-one{left:0}.sparkle-two{right:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+/* Fundo decorativo separado: a imagem do convite na frente não é modificada. */
+.forest-backdrop{
+  position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(7,28,37,.28),rgba(7,28,37,.55)),
+    url("assets/convite-luna.png") center 42% / cover no-repeat;
+  filter:blur(10px) saturate(1.2);
+  transform:scale(1.06);
+}
+.forest-backdrop::after{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(ellipse at center,rgba(10,38,48,.06),rgba(5,24,31,.42));
+}
+.butterfly-layer{
+  position:fixed; inset:0; z-index:4; pointer-events:none; overflow:hidden;
+}
+.butterfly{
+  position:absolute; left:-12vw; top:var(--top);
+  font-size:var(--size); opacity:.9;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));
+  animation:butterfly-flight var(--duration) linear var(--delay) infinite;
+  will-change:transform;
+}
+@keyframes butterfly-flight{
+  0%{transform:translate3d(-8vw,0,0) rotate(-14deg) scale(.85)}
+  22%{transform:translate3d(22vw,-34px,0) rotate(13deg) scale(1)}
+  48%{transform:translate3d(52vw,22px,0) rotate(-10deg) scale(.94)}
+  74%{transform:translate3d(82vw,-30px,0) rotate(15deg) scale(1.08)}
+  100%{transform:translate3d(118vw,8px,0) rotate(-9deg) scale(.9)}
+}
+@media(prefers-reduced-motion:reduce){
+  .butterfly{animation:none;display:none}
+}
